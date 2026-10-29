@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#121212">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Spotify Ad Skipper"
+        android:textColor="#1DB954"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Controllo MediaSession + Kill automatico via Shizuku"
+        android:textColor="#B3B3B3"
+        android:textSize="14sp"
+        android:layout_marginBottom="28dp" />
+
+    <!-- Switch generale per attivare/disattivare il blocco -->
+    <Switch
+        android:id="@+id/switchEnableService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Skipper Attivo"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:background="#1E1E1E"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Box Stato Notification Listener -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#1E1E1E"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Accesso alle Notifiche (Obbligatorio)"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvNotificationStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Controllo in corso..."
+            android:textColor="#B3B3B3"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnGrantNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apri Impostazioni Notifiche"
+            android:backgroundTint="#282828"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Box Stato Shizuku -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#1E1E1E"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. Permesso Shizuku (Kill + Riavvio)"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvShizukuStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Controllo in corso..."
+            android:textColor="#B3B3B3"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnGrantShizuku"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Autorizza Shizuku"
+            android:backgroundTint="#282828"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nota: Se Shizuku è spento, l'app userà automaticamente la modalità Mute (silenzia l'audio durante la pubblicità e lo riattiva appena riparte il brano)."
+        android:textColor="#888888"
+        android:textSize="13sp"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
